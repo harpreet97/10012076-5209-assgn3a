@@ -1,0 +1,310 @@
+﻿
+body {
+    font-family: Helvetica;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    padding-left: 250px;
+    transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+    /*margin-left: -250px;*/
+    left: 0px;
+    /*width: 250px;*/
+    background: #FFA900;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+}
+
+.pageTitle {
+    font-size: 44px;
+    float: left;
+    margin-left: 472px;
+    line-height: 65px;
+}
+.msg-btn-color{
+    color: black;
+}
+
+#wrapper.active {
+    padding-left: 0;
+}
+
+.mapiconsize {
+    width: 103px;
+    height: 103px;
+}
+
+#wrapper.active #sidebar-wrapper {
+    left: -280px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    margin-left: 20px;
+}
+
+#map table td {
+    padding: 5px;
+    border-spacing: 10px;
+    border-collapse: separate;
+    border: 1px solid black;
+}
+
+#whanautable {
+    width: 100%;
+}
+
+    #whanautable td {
+        padding: 5px;
+        border-spacing: 10px;
+        border-collapse: separate;
+    }
+
+
+.sidebar-nav {
+    position: absolute;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    background-color: #FFA900;
+    padding: 0;
+}
+
+    .sidebar-nav li {
+        line-height: 40px;
+        text-indent: 20px;
+    }
+
+        .sidebar-nav li a {
+            color: black;
+            display: block;
+            text-decoration: none;
+            padding-left: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+            .sidebar-nav li a span:before {
+                position: absolute;
+                left: 0;
+                color: black;
+                text-align: center;
+                width: 20px;
+                line-height: 18px;
+            }
+
+            .sidebar-nav li a:hover,
+            .sidebar-nav li.active {
+                color: white;
+                background-color: #FFA900;
+                text-decoration: none;
+            }
+
+            .sidebar-nav li a:active,
+            .sidebar-nav li a:focus {
+                text-decoration: none;
+            }
+
+    .sidebar-nav > .sidebar-brand {
+        height: 65px;
+        line-height: 60px;
+        font-size: 18px;
+    }
+
+        .sidebar-nav > .sidebar-brand a {
+            color: black;
+        }
+
+            .sidebar-nav > .sidebar-brand a:hover {
+                color: #fff;
+                background: none;
+            }
+
+
+
+.marginBottom20 {
+    margin-bottom: 20px;
+}
+
+.boldinput {
+    font-weight: bold;
+}
+
+.btn-color {
+    background-color: orange;
+}
+
+.btn-fontsize {
+    font-size: 22px;
+}
+
+.btn-size {
+    width: 356px;
+    height: 50px;
+}
+
+.txtbox-size {
+    width: 356px!important;
+    height: 50px!important;
+}
+
+.login-textbox {
+    width: 168px;
+    height: 50px;
+}
+
+.login-btn {
+    width: 68px;
+    height: 50px;
+}
+
+.icon-size {
+    width: 268px;
+    height: 268px;
+    
+}
+
+.content-header {
+    height: 65px;
+    line-height: 65px;
+}
+
+    .content-header h1 {
+        margin: 0;
+        /*margin-left: 20px;*/
+        line-height: 65px;
+        display: inline-block;
+    }
+
+#menu-toggle {
+    text-decoration: none;
+}
+
+.btn-menu {
+    color: #000;
+}
+
+.inset {
+    padding: 20px;
+}
+.mobilebtn-textbox-size{
+    width: 250px;
+    height: 30px;
+    background-color: orange;
+}
+
+.btnbar {
+    font-size: 36px;
+    float: left;
+    margin-left: 26px;
+    margin-top: 12px;
+}
+.rightAlign {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rightAlignBottom {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#registerSection{
+    width: 64%;clear: left;
+                    margin-left: auto;
+                    margin-right: auto;
+}
+@media only screen and (min-width: 318px ) and (max-width:468px) {
+    .pageTitle {
+        margin-left: 45px;
+        font-size:34px;
+    }
+    .btn-fontsize {
+        font-size: 18px;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+    }
+
+    .page-content {
+        margin-left: 3px;
+    }
+    .rightAlign{
+        width: 100%;
+    }
+    .rightAlignBottom {
+        width: 50%;
+    }
+    .btn-size {
+        width: 250px;
+        height: 30px;
+    }
+    #registerSection{
+        width: 100%;
+        padding: 20px;
+    }
+    .txtbox-size {
+        width: 250px!important;
+        height: 30px!important;
+    }
+}
+
+@media only screen and (min-width: 469px ) and (max-width:768px) {
+    .btn-size {
+        width: 303px;
+        height: 40px;
+    }
+    .btn-fontsize {
+        font-size: 20px;
+    }
+    .txtbox-size {
+        width: 303px!important;
+        height: 40px!important;
+    }
+    .pageTitle {
+        margin-left: 45px;
+        font-size: 34px;
+    }
+    .rightAlign {
+        width: 0;
+    }
+    .page-content {
+        margin-left: 3px;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+    }
+
+    #wrapper {
+        padding-left: 0;
+    }    
+    
+
+    /* #wrapper.active {
+        position: relative;
+        left: 250px;
+    } */
+
+
+    #menu-toggle {
+        display: inline-block;
+    }
+
+    .rightAlign{
+        width: 100%;
+    }
+    .rightAlignBottom {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 769px ) and (max-width:1024px) {
+   
+}

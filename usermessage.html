@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>My Whanau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/mywhanau.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <nav id="spy">
+                        <img src="images/icon.jpg" class="icon-size" />
+                        <ul class="sidebar-nav nav">
+                            <li>
+                                <a href="Profile.html">
+                                    <span class="solo">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="AddWhanau.html">
+                                    <span class="solo">Add Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="FindMyWhanau.html">
+                                    <span class="solo">Find My Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Messages.html">
+                                    <span class="solo">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Logout.html">
+                                    <span class="solo">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="page-content-wrapper">
+                    <div class="content-header" style="background-color: #FFA900;">
+                        <h1 id="home">
+                            <a id="menu-toggle" href="#" class="btnbar glyphicon glyphicon-align-justify btn-menu toggle hidden-lg hidden-md">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="pageTitle">
+                                Messages
+                            </div>
+                        </h1>
+                    </div>
+
+                    <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                        <table id="messages" class="marginBottom20 rightAlign">
+                            <tr>
+                                <td valign="top">
+                                    <input type="radio" />
+                                </td>
+                                <td valign="top">Write a Message
+                                    <br />
+                                    <textarea style="height: 100px; border-radius: 20px;" class="form-control"></textarea>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <input type="radio" />
+                                </td>
+                                <td valign="top">Use Predefined Message
+                                    <br />
+                                    <textarea style="height: 100px; border-radius: 20px;" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                                        class="form-control"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" valign="top">
+                                    <br />
+                                    <br />
+                                    <input type="button" class="btn btn-info login-btn msg-btn-color" value="Send" />
+                                    <br /> Or
+                                    <br />
+                                    <input type="button" class="btn btn-success login-btn msg-btn-color" value="I'm Safe" />
+                                    <br /> Or
+                                    <br />
+                                    <input type="button" class="btn btn-danger login-btn msg-btn-color" value="Panic" />
+                                </td>
+
+                                <td valign="top">
+                                    <br />
+                                    <br />
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>You can also reply using I'm safe <br/>or
+                                     panic button below which will let<br/> them know if you're safe or not.</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/custom.js"></script>
+    </form>
+</body>
+
+</html>

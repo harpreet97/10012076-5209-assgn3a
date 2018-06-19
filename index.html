@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>My Whanau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/mywhanau.css" rel="stylesheet" />
+    <style type="text/css">
+    h1, .h1 {
+    font-size: 30px!important;
+    margin-top: 40px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12 col-sm-12">
+            <div class="col-md-4 col-xs-12 col-sm-12">
+                <div class="rightAlign">
+                    <center>
+                        <h1>Find My Whanau</h1>
+                        <img src="images/icon.jpg" icon-size />
+                    </center>
+                </div>
+            </div>
+
+            <center>
+                <div id="bothSection" class="rightAlign col-xs-12 col-sm-12" style="padding-top:30px;">
+                    Existing users?
+                    <br />
+                    <input type="button" class=" btn-size txtbox-size btn-color" value="Login" id="login" />
+                    <br />
+                    <br /> Don't have an account?
+                    <br />
+                    <input type="button" class=" btn-size txtbox-size btn-color " value="Sign Up" id="register" />
+                </div>
+            </center>
+            <div class="col-md-6 rightAlign marginBottom20">
+                <center>
+                    <div id="loginSection" class="col-xs-12 col-sm-12" style="margin-top: 30px;margin-bottom: 30px;">
+                        <form id="form7" runat="server" class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control login-textbox" id="email" placeholder="Enter email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
+                                <input type="password" class="form-control login-textbox" id="pwd" placeholder="Enter password" />
+                            </div>
+                            <input type="button" class="btn-color login-btn" style="font-size: 20px;" value="Log In" onclick="Login();" />
+                            <input type="button" class="btn btn-danger cancel hidden-lg hidden-md login-btn  msg-btn-color" value="Cancel" />
+                        </form>
+                    </div>
+                </center>
+                <!-- <div class="clearfix"></div> -->
+                <center>
+                    <div id="registerSection">
+                        <div style="border: 1px solid black; border-radius: 10px; margin-top: 30px;">
+                            <form role="form">
+                                <div class="form-group">
+                                    <h1 style="font-size: 30px; text-align: center;">Create a Account</h1>
+                                    <input type="text" class="form-control boldinput txtbox-size" id="rname" placeholder="Name" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control boldinput txtbox-size" id="remail" placeholder="Email" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control boldinput txtbox-size" id="rpwd" placeholder="Password" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control boldinput txtbox-size" id="rnumber" placeholder="Mobile Number" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control boldinput txtbox-size" id="raddress" placeholder="Home Address" />
+                                </div>
+
+                                <br />
+                                <button type="submit" class="btn-size btn-color btn-fontsize" onclick="Register();">Sign Up</button>
+                                <br />
+                                <input type="button" class="btn btn-danger cancel hidden-lg hidden-md btn-fontsize center-block  btn-size txtbox-size msg-btn-color " style="margin-top: 7px;" value="Cancel" />
+                            </form>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function Login() {
+            var email = document.querySelector("#email");
+            var password = document.querySelector("#pwd");
+            if (email.value == "" && password.value == "") {
+                alert("Please enter your email or password");
+            }
+            else {
+                window.location.href = "welcome.html";
+            }
+        }
+
+        function Register() {
+            var name = document.querySelector("#rname").value;
+            var email = document.querySelector("#remail").value;
+            var password = document.querySelector("#rpwd").value;
+            var number = document.querySelector("#rnumber").value;
+            var address = document.querySelector("#raddress").value;
+            if (name == "" && email == "" && password == "") {
+                alert("Name, email and password are mandatory fields");
+            }
+            else {
+                var details = "Name: " + name + ", Email:" + email;
+                alert("You have registered to our website. The details you have entered are as follows:" + details);
+            }
+        }
+
+    </script>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/custom.js"></script>
+</body>
+
+</html>

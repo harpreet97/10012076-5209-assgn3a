@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>My Whanau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/mywhanau.css" rel="stylesheet" />
+    <style type="text/css">
+        #messages td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <nav id="spy">
+                        <img src="images/icon.jpg" class="icon-size" />
+                        <ul class="sidebar-nav nav">
+                            <li>
+                                <a href="Profile.html">
+                                    <span class="solo">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="AddWhanau.html">
+                                    <span class="solo">Add Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="FindMyWhanau.html">
+                                    <span class="solo">Find My Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Messages.html">
+                                    <span class="solo">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Logout.html">
+                                    <span class="solo">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="page-content-wrapper">
+                    <div class="content-header" style="background-color: #FFA900;">
+                        <h1 id="home">
+                            <a id="menu-toggle" href="#" class="btnbar glyphicon glyphicon-align-justify btn-menu toggle hidden-lg hidden-md">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="pageTitle">
+                                Messages
+                            </div>
+                        </h1>
+                    </div>
+
+                    <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                        <table id="messages" class="rightAlign">
+                            <tr>
+                                <td valign="top">
+                                    <input type="radio" />
+                                </td>
+                                <td valign="top">Write a Message
+                                    <br />
+                                    <textarea style="height: 100px; border-radius: 20px;" class="form-control"></textarea>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <input type="radio" />
+                                </td>
+                                <td valign="top">Use Predefined Message
+                                    <br />
+                                    <textarea style="height: 100px; border-radius: 20px;" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                                        class="form-control"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <div class="rightAlignBottom">
+                            <b style="margin-top: 40px;">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>To whom you want to send this message:-</b>
+                            <div class="marginBottom20">
+                                <b>Select people below:-</b>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="row marginBottom20">
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="pull-left" style="margin-right: 20px;" />
+                                    <input type="text" placeholder="Name" class="form-control txtbox-size" />
+                                </div>
+                            </div>
+                            <div class="row marginBottom20">
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="pull-left" style="margin-right: 20px;" />
+                                    <input type="text" placeholder="Name" class="form-control txtbox-size" />
+                                </div>
+                            </div>
+                            <div class="row marginBottom20">
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="pull-left" style="margin-right: 20px;" />
+                                    <input type="text" placeholder="Name" class="form-control txtbox-size" />
+                                </div>
+
+                            </div>
+                            <a href="usermessage.html" class="btn login-btn msg-btn-color" style="background-color: deepskyblue; font-size :20px;">Send</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/custom.js"></script>
+    </form>
+</body>
+
+</html>

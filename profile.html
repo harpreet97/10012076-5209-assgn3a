@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>My Whanau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/mywhanau.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <nav id="spy">
+                        <img src="images/icon.jpg" class="icon-size" />
+                        <ul class="sidebar-nav nav">
+                            <li>
+                                <a href="Profile.html">
+                                    <span class="solo">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="AddWhanau.html">
+                                    <span class="solo">Add Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="FindMyWhanau.html">
+                                    <span class="solo">Find My Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Messages.html">
+                                    <span class="solo">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Logout.html">
+                                    <span class="solo">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="page-content-wrapper">
+                    <div class="content-header" style="background-color: #FFA900;">
+                        <h1 id="home">
+                            <a id="menu-toggle" href="#" class="btnbar glyphicon glyphicon-align-justify btn-menu toggle hidden-lg hidden-md">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="pageTitle">
+                                Profile </div>
+                        </h1>
+                    </div>
+
+                    <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-md-3 col-md-offset-3 ">
+                                <img src="http://via.placeholder.com/100x100" class="mapiconsize img-circle center-block"  />
+                                <br />
+                                <center>
+                                    <b>Change Image</b>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-xs-offset-2 col-md-3 col-md-offset-3 col-sm-offset-4">
+                                <input type="text" class="form-control boldinput txtbox-size" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-xs-offset-2 col-md-3 col-md-offset-3 col-sm-offset-4">
+                                <input type="text" class="form-control boldinput txtbox-size" placeholder="Address" />
+                            </div>
+                        </div>
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-xs-offset-2 col-md-3 col-md-offset-3 col-sm-offset-4">
+                                <input type="text" class="form-control boldinput txtbox-size" placeholder="Mobile" />
+                            </div>
+                        </div>
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-xs-offset-2 col-md-3 col-md-offset-3 col-sm-offset-4">
+                                <input type="text" class="form-control boldinput txtbox-size" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="row marginBottom20">
+                            <div class="col-xs-12 col-xs-offset-2 col-md-3 col-md-offset-3 col-sm-offset-4">
+                                <input type="button" class="btn-size btn-color btn-fontsize" value="Edit Profile" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/custom.js"></script>
+    </form>
+</body>
+
+</html>

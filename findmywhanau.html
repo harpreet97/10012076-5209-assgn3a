@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>My Whanau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/mywhanau.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <nav id="spy">
+                        <img src="images/icon.jpg" class="icon-size" />
+                        <ul class="sidebar-nav nav">
+                            <li>
+                                <a href="Profile.html">
+                                    <span class="solo">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="AddWhanau.html">
+                                    <span class="solo">Add Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="FindMyWhanau.html">
+                                    <span class="solo">Find My Whanau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Messages.html">
+                                    <span class="solo">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Logout.html">
+                                    <span class="solo">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="page-content-wrapper">
+                    <div class="content-header" style="background-color: #FFA900;">
+                        <h1 id="home">
+                            <a id="menu-toggle" href="#" class="btnbar glyphicon glyphicon-align-justify btn-menu toggle hidden-lg hidden-md">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="pageTitle">
+                                Find My Whanau
+                            </div>
+                        </h1>
+                    </div>
+                    <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                        <div class="clearfix">
+                            <input type="text" placeholder="Search your whanau" style="width: 60%; margin-bottom: 20px;" class="form-control -boldinput center-block"
+                            />
+
+                        </div>
+
+                        <div id="map" class="center-block" style="width: 80%; height: 500px"></div>
+                        <center>
+                            <div class="center-block" style="width: 80%; height: 500px;">
+                                <table id="whanautable">
+                                    <tr>
+                                        <td>
+                                            <img src="http://via.placeholder.com/100x100?text=image" class="mapiconsize img-circle" />
+                                        </td>
+                                        <td>Name</td>
+                                        <td>25 km away from you</td>
+                                        <td>Current Address: Gate Pa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="http://via.placeholder.com/100x100?text=image" class="mapiconsize img-circle" />
+                                        </td>
+                                        <td>Name</td>
+                                        <td>35 km away from you</td>
+                                        <td>Current Address: Pyes Pa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="http://via.placeholder.com/100x100?text=image" class="mapiconsize img-circle" />
+                                        </td>
+                                        <td>Name</td>
+                                        <td>45 km away from you</td>
+                                        <td>Current Address: Mount Manuguani</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="http://via.placeholder.com/100x100?text=image" class="mapiconsize img-circle" />
+                                        </td>
+                                        <td>Name</td>
+                                        <td>75 km away from you</td>
+                                        <td>Current Address: Te Puke</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </center>
+                    </div>
+                    <script>
+                        function myMap() {
+
+                            var whanauLocations = [
+                                ['<table><tr><td> <img src="http://via.placeholder.com/100x100" class="mapiconsize img-circle" /></td><td>Name</td><td>35 km away from you</td></tr><tr><td></td><td colspan="2">Current Address: Pyes Pa</td></tr></table>', 34.046438, -118.259653],
+                                ['<table><tr><td> <img src="http://via.placeholder.com/100x100" class="mapiconsize img-circle" /></td><td>Name</td><td>45 km away from you</td></tr><tr><td></td><td colspan="2">Current Address: Mount Manuguani</td></tr></table>', 34.017951, -118.493567],
+                                ['<table><tr><td> <img src="http://via.placeholder.com/100x100" class="mapiconsize img-circle" /></td><td>Name</td><td>75 km away from you</td></tr><tr><td></td><td colspan="2">Current Address: Te Puke</td></tr></table>', 34.143073, -118.132040]
+                            ];
+                            var center = { lat: 34.052235, lng: -118.243683 };
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 9,
+                                center: center
+                            });
+                            var infowindow = new google.maps.InfoWindow({});
+                            var marker, count;
+                            for (count = 0; count < whanauLocations.length; count++) {
+                                marker = new google.maps.Marker({
+                                    position: new google.maps.LatLng(whanauLocations[count][1], whanauLocations[count][2]),
+                                    map: map,
+                                    title: whanauLocations[count][0]
+                                });
+                                google.maps.event.addListener(marker, 'click', (function (marker, count) {
+                                    return function () {
+                                        infowindow.setContent(whanauLocations[count][0]);
+                                        infowindow.open(map, marker);
+                                    }
+                                })(marker, count));
+                            }
+                        }
+                    </script>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWpFwYsrkQKjvv-BMq3pBLZmh_BfHrzCA&callback=myMap" type="text/javascript"></script>
+                </div>
+
+
+            </div>
+        </div>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/custom.js"></script>
+    </form>
+</body>
+
+</html>
